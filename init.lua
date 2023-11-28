@@ -1,4 +1,3 @@
-require("frog.remap")
-
+require("frog")
 
 
