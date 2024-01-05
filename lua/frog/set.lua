@@ -8,3 +8,4 @@ vim.opt.undodir = os.getenv("HOME") .. "/.nvim/undodir"
 vim.opt.scrolloff = 9
 
 vim.opt.number = true
+

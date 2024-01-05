@@ -6,17 +6,19 @@ return require("packer").startup(function(use)
     use('nvim-treesitter/nvim-treesitter', { run = ':TSUpdate' })
     use 'nvim-treesitter/playground'
     use 'ThePrimeagen/harpoon'
+    use { 'jghauser/follow-md-links.nvim' }
     use "mbbill/undotree"
     use "tpope/vim-fugitive"
-
     use { "catppuccin/nvim", as = "catppuccin" }
+    use({ 'monsonjeremy/onedark.nvim' })
+    use { 'luisiacc/gruvbox-baby' }
     use {
         'VonHeikemen/lsp-zero.nvim',
         branch = 'v3.x',
-                requires = {
+        requires = {
             --- Uncomment these if you want to manage LSP servers from neovim
             { 'williamboman/mason.nvim' },
-    { 'williamboman/mason-lspconfig.nvim' },
+            { 'williamboman/mason-lspconfig.nvim' },
 
             -- LSP Support
             { 'neovim/nvim-lspconfig' },
@@ -26,4 +28,5 @@ return require("packer").startup(function(use)
             { 'L3MON4D3/LuaSnip' },
         }
     }
+
 end)
