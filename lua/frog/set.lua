@@ -9,3 +9,4 @@ vim.opt.scrolloff = 9
 
 vim.opt.number = true
 
+vim.opt.spell = true

@@ -1,8 +1,9 @@
-local lsp = require('lsp-zero')
+local lsp_zero = require('lsp-zero').preset("recommended")
 
-vim.keymap.set("n", "<F3>", function() vim.lsp.buf.format() end)
-
-
-
-lsp.setup_servers({"gopls", "lua_ls", "html", "cssls", "biome"})
 require('mason').setup({})
+require('mason-lspconfig').setup({
+    ensure_installed = {},
+    handlers = {
+        lsp_zero.default_setup,
+    },
+})
